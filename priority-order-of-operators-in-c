@@ -1,0 +1,10 @@
+( )			Left to right
++  -  ++  --  !		Right to left
+*  / %			Left to right
++  -			Left to right
+<  >  <=  >=		Left to right
+ == !=			Left to right
+&&			Left to right
+||			Left to right
+ =			Right to left
+
