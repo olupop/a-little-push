@@ -1,3 +1,3 @@
 # a-little-push
 
-I will try something. Mostly C language.
+I am trying something. Mostly C language.
