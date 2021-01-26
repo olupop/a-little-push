@@ -1,3 +1,11 @@
+/*
+ *	Print names entered in a single string, 
+ *	separated by commas, 
+ *	using Dynamic Memory Functions
+ *	Author: Malik Tekin
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
