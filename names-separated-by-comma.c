@@ -34,7 +34,7 @@ char *AddName(char *str, char *name)
 	{
 		str_len = strlen(str);
 		temp = (char *)realloc(str, str_len + name_len + 3); // ',' + ' ' + '\0' -> 3 byte
-		if (str == NULL)
+		if (temp == NULL)
 		{
 			printf("Cannot allocate memory!!\n");
 			exit(EXIT_FAILURE);
