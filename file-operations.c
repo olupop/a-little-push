@@ -48,13 +48,14 @@ Option: \
 					exit(EXIT_FAILURE);
 				}
 				printf("\nFile opened.\n\n");
+				AGAIN:
 				printf("Do you want to write something now? y/n: ");
 				scanf("%c",&write);
+				// (clears the input buffer) 
+   				while ((getchar()) != '\n');
 				switch(write)
 				{
 					case 'y':
-						// (clears the input buffer) 
-   						while ((getchar()) != '\n');
 						fgets(text, sizeof(text),stdin);
 						for (i = 0; text[i] != '\0'; i++)
 						{
@@ -65,6 +66,10 @@ Option: \
 							}
 						}
 						break;
+					case 'n':
+						break;
+					default:
+						goto AGAIN;
 				}
 				
 				if (ferror(f))
@@ -142,6 +147,7 @@ Option: \
 \n\
 Option: \
 ");
+		choice = 0;
 		scanf("%d",&choice);
     		// (clears the input buffer) 
    		while ((getchar()) != '\n');
