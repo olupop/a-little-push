@@ -1,3 +1,9 @@
+/*
+ * A simple program to create, read and write files.
+ * Author: Malik Tekin
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
