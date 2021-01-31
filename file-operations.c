@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// This function, replaces the '\n' character with '\0'.
 char *fgets_wrapper(char *buffer, size_t buflen, FILE *fp)
 {
     if (fgets(buffer, buflen, fp) != 0)
@@ -46,6 +47,7 @@ Option: \
 		{
 			case 1:
 				printf("Enter file name: ");
+				// Using this function, we deleted the '\n' character at end of the file name.
 				fgets_wrapper(file_name, sizeof(file_name),stdin);
 			
 				if ((f = fopen(file_name, "w")) == NULL)
@@ -90,6 +92,7 @@ Option: \
 				break;
 			case 2:
 				printf("Enter file name: ");
+				// Using this function, we deleted the '\n' character at end of the file name.
 				fgets_wrapper(file_name, sizeof(file_name),stdin);
 				
 				if ((f = fopen(file_name, "a")) == NULL)
@@ -120,6 +123,7 @@ Option: \
 				break;
 			case 3:
 				printf("Enter file name: ");
+				// Using this function, we deleted the '\n' character at end of the file name.
 				fgets_wrapper(file_name, sizeof(file_name),stdin);
 				
 				if ((f = fopen(file_name, "r")) == NULL)
