@@ -36,7 +36,7 @@ void NumToText(unsigned long val, char *text)
 		ten = (digits3[i] / 10) % 10;
 		one = digits3[i] % 10;
 		
-		//printf("%d. uclu digits: %d hundred: %d ten: %d one: %d\n",i+1,digits3[i], hundred, ten, one);
+		//printf("%d. three digits: %d hundred: %d ten: %d one: %d\n",i+1,digits3[i], hundred, ten, one);
 		
 		if (hundred)
 		{

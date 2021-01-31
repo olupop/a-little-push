@@ -1,3 +1,11 @@
+/*
+ *	Print names entered in a single string, 
+ *	separated by commas, 
+ *	using Dynamic Memory Functions
+ *	Author: Malik Tekin
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -26,7 +34,7 @@ char *AddName(char *str, char *name)
 	{
 		str_len = strlen(str);
 		temp = (char *)realloc(str, str_len + name_len + 3); // ',' + ' ' + '\0' -> 3 byte
-		if (str == NULL)
+		if (temp == NULL)
 		{
 			printf("Cannot allocate memory!!\n");
 			exit(EXIT_FAILURE);
