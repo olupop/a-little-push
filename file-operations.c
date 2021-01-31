@@ -59,11 +59,11 @@ Option: \
 				AGAIN:
 				printf("Do you want to write something now? y/n: ");
 				scanf("%c",&write);
-				// (clears the input buffer) 
-   				while ((getchar()) != '\n');
 				switch(write)
 				{
 					case 'y':
+						// (clears the input buffer) 
+   						while ((getchar()) != '\n');
 						fgets(text, sizeof(text),stdin);
 						for (i = 0; text[i] != '\0'; i++)
 						{
