@@ -49,7 +49,9 @@ Option: \
 				printf("Enter file name: ");
 				// Using this function, we deleted the '\n' character at end of the file name.
 				fgets_wrapper(file_name, sizeof(file_name),stdin);
-			
+				// (clears the input buffer)
+				while ((getchar()) != '\n');
+				
 				if ((f = fopen(file_name, "w")) == NULL)
 				{
 					printf("CANNOT CREATE FILE...\n");
@@ -65,6 +67,8 @@ Option: \
 						// (clears the input buffer) 
    						while ((getchar()) != '\n');
 						fgets(text, sizeof(text),stdin);
+						// (clears the input buffer)
+						while ((getchar()) != '\n');
 						for (i = 0; text[i] != '\0'; i++)
 						{
 							if (fputc(text[i], f) == EOF)
@@ -94,6 +98,8 @@ Option: \
 				printf("Enter file name: ");
 				// Using this function, we deleted the '\n' character at end of the file name.
 				fgets_wrapper(file_name, sizeof(file_name),stdin);
+				// (clears the input buffer)
+				while ((getchar()) != '\n');
 				
 				if ((f = fopen(file_name, "a")) == NULL)
 				{
@@ -102,6 +108,9 @@ Option: \
 				}
 				printf("\nFile opened.\n\n");
 				fgets(text, sizeof(text),stdin);
+				// (clears the input buffer)
+				while ((getchar()) != '\n');
+				
 				for (i = 0; text[i] != '\0'; i++)
 				{
 					if (fputc(text[i], f) == EOF)
@@ -125,6 +134,8 @@ Option: \
 				printf("Enter file name: ");
 				// Using this function, we deleted the '\n' character at end of the file name.
 				fgets_wrapper(file_name, sizeof(file_name),stdin);
+				// (clears the input buffer)
+				while ((getchar()) != '\n');
 				
 				if ((f = fopen(file_name, "r")) == NULL)
 				{
